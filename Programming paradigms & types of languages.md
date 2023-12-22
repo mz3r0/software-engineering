@@ -78,3 +78,7 @@ In addition, the necessity to limit code to single-exit points appears in some c
 ### Multiple entry
 
 More rarely, subprograms allow multiple entry. This is most commonly only re-entry into a coroutine (or generator / semi-coroutine), where a subprogram yields control (and possibly a value), but can then be resumed where it left off (Python does this using `yield`). There are a number of common uses of such programming, notably for streams (particularly input/output), state machines, and concurrency. From a code execution point of view, yielding from a coroutine is closer to structured programming than returning from a subroutine, as the subprogram has not actually terminated, and will continue when called again – it is not an early exit. However, coroutines mean that multiple subprograms have execution state – rather than a single call stack of subroutines – and thus introduce a different form of complexity.
+
+From the [Multiple entry](https://en.wikipedia.org/wiki/Structured_programming#Multiple_entry) section, "It is very rare for subprograms to allow entry to an arbitrary position in the subprogram, as in this case the program state (such as variable values) is uninitialized or ambiguous, and this is very similar to a goto".
+
+> **TODO: Find out examples of multiple entry code.** The words "very rare" imply the existence of such code, which I'm curious about.
