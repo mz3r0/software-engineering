@@ -90,3 +90,9 @@ A **high-level programming language** is a language that has a relatively high l
 These languages are programmer-friendly and focus on usability over optimal program efficiency. They deal with variables, arrays, objects, complex arithmetic or Boolean expressions, subroutines, functions, loops, threads, locks, and other abstract computer science concepts. High-level languages are easier to understand and maintain, but they may be less memory-efficient compared to low-level languages.
 
 Examples of high-level languages include Java, Python, C#, and even C and C++. The latter two provide more freedom and control over memory, making them more low-level but not low enough to be considered a low-level programming language.
+
+A **low-level programming language** is a language that is closer to machine language and contains commands that are more specific to processor instructions.
+
+These languages are machine-friendly and focus on efficient program execution. They deal with registers, memory addresses, call stacks, and other low-level computer components. Low-level languages are more difficult to understand for humans but are easier for machines to interpret. They are often used when performance and efficiency are crucial, such as in real-time applications or embedded systems.
+
+Examples of low-level languages include assembly languages and machine code.
