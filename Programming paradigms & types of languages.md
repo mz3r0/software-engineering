@@ -83,6 +83,8 @@ From the [Multiple entry](https://en.wikipedia.org/wiki/Structured_programming#M
 
 > **TODO: Find out examples of multiple entry code.** The words "very rare" imply the existence of such code, which I'm curious about.
 
+---
+
 ## High level vs Low level
 
 A **high-level programming language** is a language that has a relatively high level of abstraction.
