@@ -82,3 +82,11 @@ More rarely, subprograms allow multiple entry. This is most commonly only re-ent
 From the [Multiple entry](https://en.wikipedia.org/wiki/Structured_programming#Multiple_entry) section, "It is very rare for subprograms to allow entry to an arbitrary position in the subprogram, as in this case the program state (such as variable values) is uninitialized or ambiguous, and this is very similar to a goto".
 
 > **TODO: Find out examples of multiple entry code.** The words "very rare" imply the existence of such code, which I'm curious about.
+
+## High level vs Low level
+
+A **high-level programming language** is a language that has a relatively high level of abstraction.
+
+These languages are programmer-friendly and focus on usability over optimal program efficiency. They deal with variables, arrays, objects, complex arithmetic or Boolean expressions, subroutines, functions, loops, threads, locks, and other abstract computer science concepts. High-level languages are easier to understand and maintain, but they may be less memory-efficient compared to low-level languages.
+
+Examples of high-level languages include Java, Python, C#, and even C and C++. The latter two provide more freedom and control over memory, making them more low-level but not low enough to be considered a low-level programming language.
