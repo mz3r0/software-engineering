@@ -96,3 +96,13 @@ A **low-level programming language** is a language that is closer to machine lan
 These languages are machine-friendly and focus on efficient program execution. They deal with registers, memory addresses, call stacks, and other low-level computer components. Low-level languages are more difficult to understand for humans but are easier for machines to interpret. They are often used when performance and efficiency are crucial, such as in real-time applications or embedded systems.
 
 Examples of low-level languages include assembly languages and machine code.
+
+---
+
+## Compiled vs Interpreted
+
+Compiled and interpreted programming languages differ in how they are processed and executed by the computer.
+
+In a **compiled language**, the source code is translated directly into machine code that the processor can execute, resulting in faster and more efficient execution. Examples of compiled languages include C, C++, and Fortran.
+
+On the other hand, in an **interpreted language**, the source code is not directly translated into machine code. Instead, an interpreter reads and executes the code line by line, allowing for modifications while the program is running. Examples of interpreted languages include Python, JavaScript, and Ruby.
