@@ -141,3 +141,14 @@ Whether automated by the compiler or specified by a programmer (automatic infere
 In computer science, **type safety** and type soundness are the extent to which a programming language discourages or prevents type errors. The behaviors classified as type errors by a given programming language are usually those that result from attempts to perform operations on values that are not of the appropriate data type, e.g., adding a string to an integer when there's no definition on how to handle this case. This classification is partly based on opinion.
 
 Type enforcement can be static, catching potential errors at compile time, or dynamic, associating type information with values at run-time and consulting them as needed to detect imminent errors. Type enforcement can also be a combination of both.
+
+A C example that is not memory-safe:
+
+```c
+int x = 5;
+char y[] = "37";
+char* z = x + y;
+printf("%c\n", *z);
+```
+
+In this example `z` will point to a memory address five characters beyond `y`, equivalent to three characters after the terminating zero character of the string pointed to by `y`. This is memory that the program is not expected to access. In C terms this is simply undefined behavior and the program may do anything; with a simple compiler it might actually print whatever byte is stored after the string "37".
