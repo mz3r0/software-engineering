@@ -119,3 +119,11 @@ The key differences between compiled and interpreted programming languages:
 | Debugging               | Compilation errors prevent the code from compiling     | Debugging occurs at run-time                               |
 
 Most programming languages can have both compiled and interpreted implementations, and the distinction between compiled and interpreted languages refers to the typical implementation rather than the language itself.
+
+## Dynamically typed vs statically typed
+
+In programming, a **statically typed language** is one where the data type of a variable is known at compile time, and remains unchanged throughout the execution of the program. Type checking occurs at compile time, and the type associated with each variable must be known before the source code is compiled. Examples of statically typed languages include C, C++, and Java.
+
+On the other hand, a **dynamically typed language** is one where type checking occurs at runtime or execution time. Variables are checked against types only when the program is executing, and the majority of type checking is performed at run-time. Dynamic typing can be more flexible and easier to use, as developers do not need to specify types explicitly. Examples of dynamically typed languages include Python, JavaScript, Ruby, and PHP.
+
+> In a nutshell: Statically typed refers to type checking at compile time, while dynamically typed refers to type checking at runtime.
