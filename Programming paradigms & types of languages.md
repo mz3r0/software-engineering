@@ -108,3 +108,14 @@ Compiled and interpreted programming languages differ in how they are processed 
 In a **compiled language**, the source code is translated directly into machine code that the processor can execute, resulting in faster and more efficient execution. Examples of compiled languages include C, C++, and Fortran.
 
 On the other hand, in an **interpreted language**, the source code is not directly translated into machine code. Instead, an interpreter reads and executes the code line by line, allowing for modifications while the program is running. Examples of interpreted languages include Python, JavaScript, and Ruby.
+
+The key differences between compiled and interpreted programming languages:
+
+| Aspect                  | Compiled Language                                      | Interpreted Language                                      |
+|-------------------------|--------------------------------------------------------|------------------------------------------------------------|
+| Execution               | Directly translated into machine code                  | Read and executed by an interpreter, usually line by line           |
+| Steps to Execution      | Only one step from source code to execution | At least two steps from source code to execution |
+| Speed                   | Compiled programs run faster than interpreted programs  | Interpreted programs can be modified while running and tend to be slower        |
+| Debugging               | Compilation errors prevent the code from compiling     | Debugging occurs at run-time                               |
+
+Most programming languages can have both compiled and interpreted implementations, and the distinction between compiled and interpreted languages refers to the typical implementation rather than the language itself.
