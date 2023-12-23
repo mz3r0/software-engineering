@@ -120,6 +120,8 @@ The key differences between compiled and interpreted programming languages:
 
 Most programming languages can have both compiled and interpreted implementations, and the distinction between compiled and interpreted languages refers to the typical implementation rather than the language itself.
 
+---
+
 ## Dynamically typed vs statically typed
 
 In programming, a **statically typed language** is one where the data type of a variable is known at compile time, and remains unchanged throughout the execution of the program. Type checking occurs at compile time, and the type associated with each variable must be known before the source code is compiled. Examples of statically typed languages include C, C++, and Java.
@@ -127,3 +129,9 @@ In programming, a **statically typed language** is one where the data type of a 
 On the other hand, a **dynamically typed language** is one where type checking occurs at runtime or execution time. Variables are checked against types only when the program is executing, and the majority of type checking is performed at run-time. Dynamic typing can be more flexible and easier to use, as developers do not need to specify types explicitly. Examples of dynamically typed languages include Python, JavaScript, Ruby, and PHP.
 
 > In a nutshell: Statically typed refers to type checking at compile time, while dynamically typed refers to type checking at runtime.
+
+### Type systems & type safety
+
+There are multiple [type systems](https://en.wikipedia.org/wiki/Type_system) which determine how the types of data is handled by software. A **type system** is a logical system comprising a set of rules that assigns a property called a type (for example, integer, floating point, string) to every term (a word, phrase, or other set of symbols). Usually the terms are various language constructs of a computer program, such as variables, expressions, functions, or modules.
+
+Even a type can become associated with a type. An implementation of a type system could in theory associate identifications called data type (a type of a value), class (a type of an object), and kind (a type of a type, or metatype). These are the abstractions that typing can go through, on a hierarchy of levels contained in a system.
