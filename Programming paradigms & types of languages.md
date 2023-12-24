@@ -152,3 +152,15 @@ printf("%c\n", *z);
 ```
 
 In this example `z` will point to a memory address five characters beyond `y`, equivalent to three characters after the terminating zero character of the string pointed to by `y`. This is memory that the program is not expected to access. In C terms this is simply undefined behavior and the program may do anything; with a simple compiler it might actually print whatever byte is stored after the string "37".
+
+### Strong vs weak typing
+
+One of the many ways that programming languages are colloquially classified is whether the language's type system makes it strongly typed or weakly typed (loosely typed). However, there is no precise technical definition of what the terms mean and different authors disagree about the implied meaning of the terms and the relative rankings of the "strength" of the type systems of mainstream programming languages. For this reason, writers who wish to write unambiguously about type systems often eschew the terms "strong typing" and "weak typing" in favor of specific expressions such as "type safety".
+
+Generally, a strongly typed language has stricter typing rules at compile time, which implies that errors and are more likely to happen during compilation. Most of these rules affect variable assignment, function return values, procedure arguments and function calling. Dynamically typed languages (where type checking happens at run time can also be strongly typed. In dynamically typed languages, values, rather than variables, have types.
+
+A weakly typed language has looser typing rules and may produce unpredictable or even erroneous results or may perform implicit type conversion at runtime. Advocates of dynamically typed (generally "weakly typed") languages find such concerns to be overblown and believe that static typing actually introduces an exponentially larger set of problems and inefficiencies. A different but related concept is [latent typing](https://en.wikipedia.org/wiki/Latent_typing "Latent typing").
+
+> **TODO: Expand on the topic of latent typing**
+
+Strongly typed language examples include Java, C, C++. Some languages considered weakly typed include Python, PHP and JavaScript, which allow for more flexibility in type conversions.
