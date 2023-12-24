@@ -164,3 +164,23 @@ A weakly typed language has looser typing rules and may produce unpredictable or
 > **TODO: Expand on the topic of latent typing**
 
 Strongly typed language examples include Java, C, C++. Some languages considered weakly typed include Python, PHP and JavaScript, which allow for more flexibility in type conversions.
+
+---
+
+## Imperative & Declarative
+
+Programming paradigms classify programming languages based on their features. One language may be classified into multiple paradigms.
+
+**Imperative programming**. In this programming paradigm, we describe the statements that change the program's state. Focus is on how the program operates, step by step; given a sequence of instructions/commands. This is often contrasted to high-level descriptions of its expected results, as observed in Declarative programming.
+
+Imperative languages are often low-level, meaning they are closer to the hardware and have more control over the memory and performance. Some examples of imperative languages are C, Java, and Python.
+
+The programming paradigm used to build programs for almost all computers typically follows an imperative model. Digital computer hardware is designed to execute machine code, which is native to the computer and is usually written in the imperative style, although low-level compilers and interpreters using other paradigms exist for some architectures such as lisp machines. Many imperative programming languages (such as Fortran, BASIC, and C) are abstractions of assembly language.
+
+> Imperative literally means giving authoritative command for a specific needs.
+
+**Declarative programming**. In this programming paradigm logic of computation is expressed without describing its control flow. Many languages that apply this style attempt to minimize or eliminate side effects by describing what the program must accomplish in terms of the problem domain, rather than describing _how_ to accomplish it as a sequence of the programming language primitives; the how being left up to the language's implementation. This is in contrast with imperative programming, which implements algorithms in explicit steps.
+
+In a few words, declarative programming focuses on what to achieve rather than how to achieve it. Declarative languages are often high-level, meaning they are more abstract and expressive and have less control over the details.
+
+Common declarative languages include those of database query languages (e.g., SQL, XQuery), regular expressions, logic programming (e.g. Prolog, Datalog, answer set programming), **functional programming** (Haskell, OCamel), and configuration management systems. Functional and logic programming languages are characterized by a declarative programming style.
