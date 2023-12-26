@@ -218,3 +218,11 @@ The principles of modularity and code reuse in practical functional languages 
 - Functional programming languages support (and heavily use) first-class functions, anonymous functions and closures, although these concepts have also been included in procedural languages at least since Algol 68.
 
 **The main difference between the styles is that functional programming languages remove or at least deemphasize the imperative elements of procedural programming.** The feature set of functional languages is therefore designed to support writing programs as much as possible in terms of pure functions.
+
+### Purely functional programming
+
+Functional programming is sometimes treated as synonymous with **purely functional programming**, a subset of functional programming which treats all functions as deterministic mathematical functions, or pure functions. When a pure function is called with some given arguments, it will always return the same result (deterministic), and cannot be affected by any mutable state or other side effects (pure). It is a style where all computation is treated as the evaluation of mathematical functions.
+
+> Declarative, deterministic, and unchanging (immutability) are terms used to describe purely functional programming.
+
+Purely functional programming consists of ensuring that functions, inside the functional paradigm, will only depend on their arguments, regardless of any global or local state. A pure functional subroutine only has visibility of changes of state represented by state variables included in its scope.
