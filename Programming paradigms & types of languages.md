@@ -197,4 +197,6 @@ Procedural programming languages are also imperative languages, because they mak
 
 **Distinction from imperative programming**. Often, the terms "procedural programming" and "imperative programming" are used synonymously. However, procedural programming relies heavily on blocks and scope, whereas imperative programming as a whole may or may not have such features. As such, procedural languages generally use reserved words that act on blocks, such as if, while, and for, to implement control flow, whereas non-structured imperative languages use goto statements and branch tables for the same purpose.
 
+**Relation to logic programming**: on [Wikipedia](https://en.wikipedia.org/wiki/Procedural_programming#Logic_programming)
+
 
