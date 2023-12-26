@@ -226,3 +226,11 @@ Functional programming is sometimes treated as synonymous with **purely function
 > Declarative, deterministic, and unchanging (immutability) are terms used to describe purely functional programming.
 
 Purely functional programming consists of ensuring that functions, inside the functional paradigm, will only depend on their arguments, regardless of any global or local state. A pure functional subroutine only has visibility of changes of state represented by state variables included in its scope.
+
+**Randomness and time functions are impure**, because they depend on the state of the system or the environment, which can change at any time. Moreover, they can also affect the state of the system or the environment, which can affect other functions.
+
+> See also: [Pure Function](https://en.wikipedia.org/wiki/Pure_function)
+
+This is in contrast with impure procedures, common in imperative programming, which can have side effects (such as modifying the program's state or taking input from a user). Proponents of purely functional programming claim that by restricting side effects, programs can have fewer bugs, be easier to debug and test, and be more suited to formal verification.
+
+> The exact difference between pure and impure functional programming is a matter of controversy. Sabry, Amr (January 1993). "What is a purely functional language?". Journal of Functional Programming. 8 (1): 1–22 [DOI](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/what-is-a-purely-functional-language/3A39D50DA48F628D17D9A768A1FA39C3)
