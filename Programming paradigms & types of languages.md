@@ -199,4 +199,22 @@ Procedural programming languages are also imperative languages, because they mak
 
 **Relation to logic programming**: on [Wikipedia](https://en.wikipedia.org/wiki/Procedural_programming#Logic_programming)
 
+---
 
+## Functional programming
+
+In computer science, **functional programming** is a programming paradigm where programs are constructed by applying and composing functions. It is a declarative programming paradigm in which function definitions are trees of expressions that **map values to other values**, rather than a sequence of imperative statements which update the running state of the program.
+
+In functional programming, functions are treated as first-class citizens, meaning that they can be bound to names (including local identifiers), passed as arguments, and returned from other functions, just as any other data type can. This allows programs to be written in a declarative and composable style, where small functions are combined in a modular manner.
+
+Functional programming (FP) has its roots in academia, evolving from the lambda calculus, a formal system of computation based only on functions. FP has historically been less popular than imperative programming, but many functional languages are seeing use today in industry and education, including Common Lisp, Scheme, Clojure, Wolfram Language, Racket, Erlang, Elixir, OCaml, Haskell, and F#.
+
+Functional programming is also key to some languages that have found success in specific domains, like JavaScript in the Web, R in statistics, J, K and Q in financial analysis, and XQuery/XSLT for XML. Domain-specific declarative languages like SQL and Lex/Yacc use some elements of functional programming, such as not allowing mutable values. In addition, many other programming languages support programming in a functional style or have implemented features from functional programming, such as C++11, C#, Kotlin, Perl, PHP,  Python, Go, Rust, Raku, Scala, and Java (since Java 8).
+
+The principles of modularity and code reuse in practical functional languages are fundamentally the same as in procedural languages, since they both stem from structured programming. So for example:
+- Procedures correspond to functions. Both allow the reuse of the same code in various parts of the programs, and at various points of its execution.
+- By the same token, procedure calls correspond to function application.
+- Functions and their modularly separated from each other in the same manner, by the use of function arguments, return values and variable scopes.
+- Functional programming languages support (and heavily use) first-class functions, anonymous functions and closures, although these concepts have also been included in procedural languages at least since Algol 68.
+
+**The main difference between the styles is that functional programming languages remove or at least deemphasize the imperative elements of procedural programming.** The feature set of functional languages is therefore designed to support writing programs as much as possible in terms of pure functions.
