@@ -186,3 +186,15 @@ In a few words, declarative programming focuses on what to achieve rather than h
 Common declarative languages include those of database query languages (e.g., SQL, XQuery), regular expressions, logic programming (e.g. Prolog, Datalog, answer set programming), **functional programming** (Haskell, OCamel), and configuration management systems. Functional and logic programming languages are characterized by a declarative programming style.
 
 **Imperative vs Declarative**. In reality, most programming languages and applications are not purely imperative or declarative, but rather a mix of both (also called hybrid languages). For example, Python is an imperative language that supports some declarative features, such as list comprehensions and generators. SQL is a declarative language that allows some imperative commands, such as loops and variables. Makefiles, specify dependencies in a declarative fashion, but include an imperative list of actions to take as well. Similarly, yacc specifies a context free grammar declaratively, but includes code snippets from a host language, which is usually imperative (such as C). Hybrid approaches can combine the best of both worlds and offer more flexibility and functionality.
+
+---
+
+## Procedural programming
+
+Procedural programming is a programming paradigm, derived from imperative programming, based on the concept of the procedure call. Procedures (a type of routine or subroutine) simply contain a series of computational steps to be carried out. Any given procedure might be called at any point during a program's execution, including by other procedures or itself. The first major procedural programming languages appeared c. 1957–1964, including Fortran, ALGOL, COBOL, PL/I and BASIC. Pascal and C were published c. 1970–1972.
+
+Procedural programming languages are also imperative languages, because they make explicit references to the state of the execution environment. This could be anything from variables (which may correspond to processor registers) to something like the position of the "turtle" in the Logo programming language. Procedural programming could be considered a step toward declarative programming. A programmer can often tell, simply by looking at the names, arguments, and return types of procedures (and related comments), what a particular procedure is supposed to do, without necessarily looking at the details of how it achieves its result. At the same time, a complete program is still imperative since it _fixes_ the statements to be executed and their order of execution to a large extent.
+
+**Distinction from imperative programming**. Often, the terms "procedural programming" and "imperative programming" are used synonymously. However, procedural programming relies heavily on blocks and scope, whereas imperative programming as a whole may or may not have such features. As such, procedural languages generally use reserved words that act on blocks, such as if, while, and for, to implement control flow, whereas non-structured imperative languages use goto statements and branch tables for the same purpose.
+
+
