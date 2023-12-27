@@ -234,3 +234,17 @@ Purely functional programming consists of ensuring that functions, inside the fu
 This is in contrast with impure procedures, common in imperative programming, which can have side effects (such as modifying the program's state or taking input from a user). Proponents of purely functional programming claim that by restricting side effects, programs can have fewer bugs, be easier to debug and test, and be more suited to formal verification.
 
 > The exact difference between pure and impure functional programming is a matter of controversy. Sabry, Amr (January 1993). "What is a purely functional language?". Journal of Functional Programming. 8 (1): 1–22 [DOI](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/what-is-a-purely-functional-language/3A39D50DA48F628D17D9A768A1FA39C3)
+
+### Concepts
+
+A number of concepts and paradigms are specific to functional programming, and generally foreign to imperative programming (including object-oriented programming). However, programming languages often cater to several programming paradigms, so programmers using "mostly imperative" languages may have utilized some of these concepts.
+
+**Higher-order functions** are functions that can either take other functions as arguments or return them as results. In calculus, an example of a higher-order function is the differential operator d/dx, which returns the derivative of a function f.
+
+**Pure functions** (or expressions) have no side effects (memory or I/O). This means that pure functions have several useful properties, many of which can be used to optimize the code:
+- If the result of a pure expression is not used, it can be removed without affecting other expressions.
+- If a pure function is called with arguments that cause no side-effects, the result is constant with respect to that argument list. This can enable caching optimizations such as memoization.
+- If there is no data dependency between two pure expressions, their order can be reversed, or they can be performed in parallel and they cannot interfere with one another (in other terms, the evaluation of any pure expression is [thread-safe](https://en.wikipedia.org/wiki/Thread-safe)). (needs more info; using "any" it implies that no two pure expressions have data dependency).
+- If the entire language does not allow side-effects, then any evaluation strategy can be used; this gives the compiler freedom to reorder or combine the evaluation of expressions in a program (for example, using [deforestation](https://en.wikipedia.org/wiki/Deforestation_(computer_science) "Deforestation (computer science)")).
+
+
