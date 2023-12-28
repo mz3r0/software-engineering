@@ -244,7 +244,7 @@ A number of concepts and paradigms are specific to functional programming, and g
 **Pure functions** (or expressions) have no side effects (memory or I/O). This means that pure functions have several useful properties, many of which can be used to optimize the code:
 - If the result of a pure expression is not used, it can be removed without affecting other expressions.
 - If a pure function is called with arguments that cause no side-effects, the result is constant with respect to that argument list. This can enable caching optimizations such as memoization.
-- If there is no data dependency between two pure expressions, their order can be reversed, or they can be performed in parallel and they cannot interfere with one another (in other terms, the evaluation of any pure expression is [thread-safe](https://en.wikipedia.org/wiki/Thread-safe)). (needs more info; using "any" it implies that no two pure expressions have data dependency).
+- If there is no data dependency between two pure expressions, their order can be reversed, or they can be performed in parallel and they cannot interfere with one another (in other terms, the evaluation of any pure expression is [thread-safe](https://en.wikipedia.org/wiki/Thread-safe)). (does this apply to any two pure functions though?).
 - If the entire language does not allow side-effects, then any evaluation strategy can be used; this gives the compiler freedom to reorder or combine the evaluation of expressions in a program (for example, using [deforestation](https://en.wikipedia.org/wiki/Deforestation_(computer_science) "Deforestation (computer science)")).
 
 
