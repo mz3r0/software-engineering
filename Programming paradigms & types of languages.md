@@ -252,3 +252,17 @@ A number of concepts and paradigms are specific to functional programming, and g
 > While most compilers for imperative programming languages detect pure functions and perform common-subexpression elimination for pure function calls, they cannot always do this for pre-compiled libraries, which generally do not expose this information, thus preventing optimizations that involve those external functions. Some compilers, such as gcc, add extra keywords for a programmer to explicitly mark external functions as pure, to enable such optimizations. Fortran 95 also lets functions be designated pure. C++11 added `constexpr` keyword with similar semantics.
 
 Iteration (looping) in functional languages is usually accomplished via recursion. Recursive functions invoke themselves, letting an operation be repeated until it reaches the base case. In general, recursion requires maintaining a stack, which consumes space in a linear amount to the depth of recursion. This could make recursion prohibitively expensive to use instead of imperative loops. However, a special form of recursion known as [tail recursion](https://en.wikipedia.org/wiki/Tail_recursion "Tail recursion") can be recognized and optimized by a compiler into the same code used to implement iteration in imperative languages. Common patterns of recursion can be abstracted away using higher-order functions, with [catamorphisms](https://en.wikipedia.org/wiki/Catamorphism "Catamorphism") and [anamorphisms](https://en.wikipedia.org/wiki/Anamorphism "Anamorphism") (or "folds" and "unfolds") being the most obvious examples. Such recursion schemes play a role analogous to built-in control structures such as loops in imperative languages.
+
+**Strict versus non-strict evaluation**.
+
+Functional languages can be categorized by whether they use _strict (eager)_ or _non-strict (lazy)_ evaluation, concepts that refer to how function arguments are processed when an expression is being evaluated. The technical difference is in the [denotational semantics](https://en.wikipedia.org/wiki/Denotational_semantics "Denotational semantics") of expressions containing failing or divergent computations. Under strict evaluation, the evaluation of any term containing a failing subterm fails. For example, the expression:
+
+```python
+print length([2+1, 3*2, 1/0, 5-4])
+```
+
+fails under strict evaluation because of the division by zero in the third element of the list. Under lazy evaluation, the length function returns the value 4 (i.e., the number of items in the list), since evaluating it does not attempt to evaluate the terms making up the list. In brief, strict evaluation always fully evaluates function arguments before invoking the function. Lazy evaluation does not evaluate function arguments unless their values are required to evaluate the function call itself.
+
+The usual implementation strategy for lazy evaluation in functional languages is [graph reduction](https://en.wikipedia.org/wiki/Graph_reduction). Lazy evaluation is used by default in several pure functional languages, including Miranda, Clean, and Haskell.
+
+> Main article: [Evaluation strategy](https://en.wikipedia.org/wiki/Evaluation_strategy)
