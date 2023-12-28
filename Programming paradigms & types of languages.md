@@ -266,3 +266,12 @@ fails under strict evaluation because of the division by zero in the third eleme
 The usual implementation strategy for lazy evaluation in functional languages is [graph reduction](https://en.wikipedia.org/wiki/Graph_reduction). Lazy evaluation is used by default in several pure functional languages, including Miranda, Clean, and Haskell.
 
 > Main article: [Evaluation strategy](https://en.wikipedia.org/wiki/Evaluation_strategy)
+
+**Referential transparency**.
+
+Functional programs do not have assignment statements, that is, the value of a variable in a functional program never changes once defined. This eliminates any chances of side effects because any variable can be replaced with its actual value at any point of execution. So, functional programs are referentially transparent.
+
+> Main article: [Referential transparency](https://en.wikipedia.org/wiki/Referential_transparency)
+
+Related to FP: [total functional programming](https://en.wikipedia.org/wiki/Total_functional_programming "Total functional programming"), [type systems](https://en.wikipedia.org/wiki/Type_system), [functional logic programming](https://en.wikipedia.org/wiki/Functional_logic_programming), [logic programming](https://en.wikipedia.org/wiki/Logic_programming)
+
