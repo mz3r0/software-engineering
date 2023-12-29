@@ -275,3 +275,12 @@ Functional programs do not have assignment statements, that is, the value of a v
 
 Related to FP: [total functional programming](https://en.wikipedia.org/wiki/Total_functional_programming "Total functional programming"), [type systems](https://en.wikipedia.org/wiki/Type_system), [functional logic programming](https://en.wikipedia.org/wiki/Functional_logic_programming), [logic programming](https://en.wikipedia.org/wiki/Logic_programming)
 
+---
+
+## Data-driven programming
+
+In computer programming, **data-driven programming** is a programming paradigm in which the program statements describe the data to be matched and the processing required rather than defining a sequence of steps to be taken. Standard examples of data-driven languages are the text-processing languages sed and AWK, and the document transformation language XSLT, where the data is a sequence of lines in an input stream – these are thus also known as **line-oriented languages** – and pattern matching is primarily done via regular expressions or line numbers.
+
+Data-driven programming is similar to event-driven programming, in that both are structured as pattern matching and resulting processing, and are usually implemented by a main loop, though they are typically applied to different domains.
+
+---
