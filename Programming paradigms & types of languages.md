@@ -323,3 +323,17 @@ The focus of procedural programming is to break down a programming task into a c
 |Record|Object|
 |Module|Class|
 |Procedure call|Message|
+
+**Bonus**
+
+Design Patterns: Elements of Reusable Object-Oriented Software is an influential book published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, often referred to humorously as the "Gang of Four". Along with exploring the capabilities and pitfalls of object-oriented programming, it describes 23 common programming problems and patterns for solving them. Related guidelines are SOLID and GRASP.
+
+> These will be multiple references to these terms from this point onward.
+
+> **TODO: Create "Programming design patterns.md"**
+
+Many of the most widely used programming languages (such as C++, Java, Python, etc.) are multi-paradigm and they support object-oriented programming to a greater or lesser degree, typically in combination with imperative, procedural programming.
+
+Sourced from Wikipedia: Significant object-oriented languages include: Ada, ActionScript, C++, Common Lisp, C#, Dart, Eiffel, Fortran 2003, Haxe, Java, JavaScript, Kotlin, Logo, MATLAB, Objective-C, Object Pascal, Perl, PHP, Python, R, Raku, Ruby, Scala, SIMSCRIPT, Simula, Smalltalk, Swift, Vala and Visual Basic.NET.
+
+> I didn't include any OOP examples as these can be easily found online in whichever programming language you might be learning.
