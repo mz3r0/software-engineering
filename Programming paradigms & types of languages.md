@@ -300,3 +300,15 @@ From Wikipedia:
 - Languages with most of the features of objects (classes, methods, inheritance), but in a distinctly original form. Examples: Oberon (Oberon-1 or Oberon-2).
 - Languages with [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type "Abstract data type") support which may be used to resemble OO programming, but without all features of object-orientation. Examples: JavaScript, Lua, Modula-2, CLU.
 - Chameleon languages that support multiple paradigms, including OO. [Tcl](https://en.wikipedia.org/wiki/Tcl "Tcl") stands out among these for TclOO, a hybrid object system that supports both prototype-based and class-based OO.
+
+**Cohesion & OOP.**
+
+In OOP, if the methods that serve a class tend to be similar in many aspects, then the class is said to have high cohesion. Cohesion is increased if:
+- The functionalities embedded in a class, accessed through its methods, have much in common.
+- Methods carry out a small number of related activities, by _avoiding_ [coarsely grained](https://en.wikipedia.org/wiki/Granularity#Data_granularity "Granularity") or unrelated sets of data.
+- Related methods are in the same source file or otherwise grouped together; for example, in separate files but in the same sub-directory/folder.
+
+Advantages of high cohesion (or "strong cohesion") are:
+- Reduced module complexity (they are simpler, having fewer operations).
+- Increased system maintainability, because logical changes in the domain affect fewer modules, and because changes in one module require fewer changes in other modules. (Careful design and application of various principles leads to this)
+- Increased module reusability, because application developers will find the component they need more easily among the cohesive set of operations provided by the module.
