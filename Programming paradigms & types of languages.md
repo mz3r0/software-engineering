@@ -360,4 +360,4 @@ In simpler words and using the fruit example, a "fruit" object would represent t
 
 Most prototype-based systems enable the alteration of prototypes during runtime whereas few class-based OOP systems allow classes to be altered during the execution; namely Common Lisp, Dylan, Objective-C, Perl, Python, Ruby, or Smalltalk. These languages can be thought of supporting both*.
 
-> * verification needed
+> *verification needed
