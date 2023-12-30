@@ -338,8 +338,6 @@ Sourced from Wikipedia: Significant object-oriented languages include: Ada, Acti
 
 > I didn't include any OOP examples as they can be easily found online in whichever programming language you might be learning.
 
----
-
 ### Class-based vs prototype-based
 
 Two more specific programming paradigms exist that are based on OOP.
@@ -349,3 +347,17 @@ In **class-based languages** the _classes_ are defined beforehand and the _
 In **prototype-based languages** the objects are the primary entities. No classes even exist. The prototype of an object is just another object to which the object is linked. Every object has one prototype link (and only one). New objects can be created based on already existing objects chosen as their prototype. You may call two different objects apple and orange a fruit, if the object fruit exists, and both apple and orange have fruit as their prototype. The idea of the fruit class does not exist explicitly, but as the equivalence class of the objects sharing the same prototype. The attributes and methods of the prototype are delegated to all the objects of the equivalence class defined by this prototype. The attributes and methods owned individually by the object may not be shared by other objects of the same equivalence class; e.g. the attribute *sugar_content* may be unexpectedly not present in apple. Only single inheritance can be implemented through the prototype.
 
 > In a nutshell, behavior reuse is performed via a process of reusing existing objects that serve as prototypes (by cloning and extending). This model can also be known as prototypal, prototype-oriented, _classless, or instance-based programming.
+
+Almost all prototype-based systems are based on interpreted and dynamically-typed languages.
+
+Prototypal inheritance in JavaScript is described by Douglas Crockford as:
+
+> You make prototype objects, and then … make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects… Objects inherit from objects. What could be more object oriented than that?
+
+Python supports both Class-based and prototype-based OOP.
+
+In simpler words and using the fruit example, a "fruit" object would represent the properties and functionality of fruit in general. A "banana" object would be cloned from the "fruit" object and general properties specific to bananas would be appended. Each individual "banana" object would be cloned from the generic "banana" object. In a class-based scenario there would be a "banana" class extending the "fruit" class.
+
+Most prototype-based systems enable the alteration of prototypes during runtime whereas few class-based OOP systems allow classes to be altered during the execution; namely Common Lisp, Dylan, Objective-C, Perl, Python, Ruby, or Smalltalk. These languages can be thought of supporting both*.
+
+> * verification needed
