@@ -336,4 +336,15 @@ Many of the most widely used programming languages (such as C++, Java, Python, e
 
 Sourced from Wikipedia: Significant object-oriented languages include: Ada, ActionScript, C++, Common Lisp, C#, Dart, Eiffel, Fortran 2003, Haxe, Java, JavaScript, Kotlin, Logo, MATLAB, Objective-C, Object Pascal, Perl, PHP, Python, R, Raku, Ruby, Scala, SIMSCRIPT, Simula, Smalltalk, Swift, Vala and Visual Basic.NET.
 
-> I didn't include any OOP examples as these can be easily found online in whichever programming language you might be learning.
+> I didn't include any OOP examples as they can be easily found online in whichever programming language you might be learning.
+
+---
+
+### Class-based vs prototype-based
+
+Two more specific programming paradigms exist that are based on OOP.
+
+In **class-based languages** the _classes_ are defined beforehand and the _objects_ are instantiated based on the classes. If two objects _apple_ and _orange_ are instantiated from the class _Fruit_, they are inherently fruits and it is guaranteed that you may handle them in the same way; e.g. a programmer can expect the existence of the same attributes such as _color_ or _sugar_content_ or _is_ripe_.
+
+In **prototype-based languages** the objects are the primary entities. No classes even exist. The prototype of an object is just another object to which the object is linked. Every object has one prototype link (and only one). New objects can be created based on already existing objects chosen as their prototype. You may call two different objects apple and orange a fruit, if the object fruit exists, and both apple and orange have fruit as their prototype. The idea of the fruit class does not exist explicitly, but as the equivalence class of the objects sharing the same prototype. The attributes and methods of the prototype are delegated to all the objects of the equivalence class defined by this prototype. The attributes and methods owned individually by the object may not be shared by other objects of the same equivalence class; e.g. the attribute *sugar_content* may be unexpectedly not present in apple. Only single inheritance can be implemented through the prototype.
+
