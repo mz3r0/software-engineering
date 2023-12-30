@@ -284,3 +284,12 @@ In computer programming, **data-driven programming** is a programming paradigm i
 Data-driven programming is similar to event-driven programming, in that both are structured as pattern matching and resulting processing, and are usually implemented by a main loop, though they are typically applied to different domains.
 
 ---
+
+## Object-Oriented
+
+**Object-oriented programming** (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields / attributes / properties, and code in the form of procedures / methods. A common feature is the special name `this` or `self` which is used to refer to the current object and its fields or methods. OOP originates from MIT in the late 1950s and early 1960s.
+
+> Related topic: Open recursion
+
+The concept of Encapsulation is at the core of OOP. **Encapsulation** prevents external code from being concerned with the internal workings of an object. It achieves data abstraction. This facilitates code refactoring, for example allowing the author of the class to change how objects of that class represent their data internally without changing any external code (as long as "public" method calls work the same way). It also encourages programmers to put all the code that is concerned with a certain set of data in the same class, which organizes it for easy comprehension by other programmers. Encapsulation is a technique that encourages decoupling.
+
