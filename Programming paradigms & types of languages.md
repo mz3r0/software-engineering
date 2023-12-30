@@ -301,7 +301,7 @@ From Wikipedia:
 - Languages with [abstract data type](https://en.wikipedia.org/wiki/Abstract_data_type "Abstract data type") support which may be used to resemble OO programming, but without all features of object-orientation. Examples: JavaScript, Lua, Modula-2, CLU.
 - Chameleon languages that support multiple paradigms, including OO. [Tcl](https://en.wikipedia.org/wiki/Tcl "Tcl") stands out among these for TclOO, a hybrid object system that supports both prototype-based and class-based OO.
 
-**Cohesion & OOP.**
+**Cohesion & OOP**
 
 In OOP, if the methods that serve a class tend to be similar in many aspects, then the class is said to have high cohesion. Cohesion is increased if:
 - The functionalities embedded in a class, accessed through its methods, have much in common.
@@ -312,3 +312,14 @@ Advantages of high cohesion (or "strong cohesion") are:
 - Reduced module complexity (they are simpler, having fewer operations).
 - Increased system maintainability, because logical changes in the domain affect fewer modules, and because changes in one module require fewer changes in other modules. (Careful design and application of various principles leads to this)
 - Increased module reusability, because application developers will find the component they need more easily among the cohesive set of operations provided by the module.
+
+**Distinction from procedural programming**
+
+The focus of procedural programming is to break down a programming task into a collection of variables, data structures, and subroutines, whereas in object-oriented programming it is to necessary break down a programming task into objects that expose behavior (methods) and data (members or attributes) using interfaces. The most important distinction is that while procedural programming uses procedures to operate on data structures, object-oriented programming bundles the two together, so an "object", which is an instance of a class, operates on its "own" data structure. Nomenclature varies between the two, although they have similar semantics:
+
+|Procedural|Object-oriented|
+|---|---|
+|Procedure|Method|
+|Record|Object|
+|Module|Class|
+|Procedure call|Message|
