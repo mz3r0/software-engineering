@@ -376,3 +376,22 @@ Behavior-driven design, where the focus is on the behavior of objects rather tha
 
 Sources: InfoWorld [article](https://www.infoworld.com/article/2073723/why-getter-and-setter-methods-are-evil.html?page=2) by Allen Holub, Yegor Bugayenko, Marcus Biel
 
+#### More on the topic from Allen Holub's column
+
+##### On the nature of design
+
+It's not an accident that every chapter in the Gang of Four's _Design Patterns_ book includes a "Consequences" section that describes when and why using a pattern is inappropriate.
+
+> **TODO: Add a link here** when I finish the programming design patterns document
+
+One basic principle of OO systems is data abstraction. You should completely hide the way in which an object implements a message handler from the rest of the program. **That's one reason why all of your instance variables (a class's non-constant fields) should be private**.
+
+If you make an instance variable public, then you can't change the field as the class evolves over time because you would break the external code that uses the field. You don't want to search 1,000 uses of a class simply because you want to change that class.
+
+Without implementation hiding, there's little point in using other OO features.
+
+Accessor methods are dangerous for the same reason that public fields are dangerous: They provide external access to implementation details.
+
+The lack of getter/setter methods doesn't mean that some data doesn't flow through the system. Nonetheless, it's best to minimize data movement as much as possible. My experience is that maintainability is inversely proportionate to the amount of data that moves between objects. Though you might not see how yet, you can actually eliminate most of this data movement.
+
+***Don't ask for the information you need to do the work; ask the object that has the information to do the work for you.***
