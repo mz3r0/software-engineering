@@ -361,3 +361,15 @@ In simpler words and using the fruit example, a "fruit" object would represent t
 Most prototype-based systems enable the alteration of prototypes during runtime whereas few class-based OOP systems allow classes to be altered during the execution; namely Common Lisp, Dylan, Objective-C, Perl, Python, Ruby, or Smalltalk. These languages can be thought of supporting both*.
 
 > *verification needed
+
+### The getters setters debate
+
+Getter and setter methods, also known as accessors, have been a subject of debate in the object-oriented programming community. While they are commonly used in languages like Java, there are arguments against their widespread use.
+
+Two main points against getters and setters:
+1. **Violation of Encapsulation**: Getter and setter methods provide external access to an object's internal state, violating the principle of encapsulation which aims to hide the internal state of an object and only allow controlled access to it. This leads to difficulties in maintaining the code.
+2. **Tight Coupling or violation of loose coupling**: Changing the internal representation will affect the code that uses it. This makes flexible and maintainable code difficult, if not impossible.
+
+Behavior-driven design, where the focus is on the behavior of objects rather than their state, is an alternative approach to relying heavily on getters and setters. Properties should also be used in languages that support them.
+
+Sources: InfoWorld [article](https://www.infoworld.com/article/2073723/why-getter-and-setter-methods-are-evil.html?page=2) by Allen Holub, Yegor Bugayenko, Marcus Biel
