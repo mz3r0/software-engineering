@@ -372,4 +372,7 @@ Two main points against getters and setters:
 
 Behavior-driven design, where the focus is on the behavior of objects rather than their state, is an alternative approach to relying heavily on getters and setters. Properties should also be used in languages that support them.
 
+> **TODO: Add the concept of properties briefly**
+
 Sources: InfoWorld [article](https://www.infoworld.com/article/2073723/why-getter-and-setter-methods-are-evil.html?page=2) by Allen Holub, Yegor Bugayenko, Marcus Biel
+
