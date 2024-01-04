@@ -437,3 +437,16 @@ The classes then act out based on the following rules.
 - If a CRC card gets too full, you must create another class (CRC card) to handle some of the responsibilities. Complexity is limited by what you can fit on a 4x6 index card.
 
 The process Holub just described _is_ the OO design process, albeit simplified for a classroom environment. Some people design real programs this way using CRC cards. More often than not, however, designers develop the dynamic and static models in Unified Modeling Language (UML). The point is that an OO system is a conversation between objects. If you think about it for a moment, get/set methods just don't come up when you have a conversation. By the same token, get/set methods won't appear in your code if you design in this manner before you start coding.
+
+##### Summing up
+
+Let's pull everything together: You shouldn't use accessor methods (getters and setters) unless absolutely necessary because these methods expose information about how a class is implemented and as a consequence make your code harder to maintain. Sometimes get/set methods are unavoidable, but an experienced OO designer could probably eliminate 99 percent of the accessors currently in your code without much difficulty.
+
+Getter/setter methods often make their way in code because the coder was thinking procedurally. The best way to break out of that procedural mindset is to think in terms of a conversation between objects that have well-defined responsibilities. Cunningham's CRC card approach is a great way to get started.
+
+"Parts of this article are adapted from my forthcoming book, tentatively titled Holub on Patterns: Learning Design Patterns by Looking at Code, to be published by Apress (www.apress.com) this fall.
+
+Allen Holub has worked in the computer industry since 1979. He currently works as a consultant, helping companies not squander money on software by providing advice to executives, training, and design-and-programming services. He's authored eight books, including Taming Java Threads (Apress, 2000) and Compiler Design in C (Pearson Higher Education, 1990), and teaches regularly for the University of California Berkeley Extension. Find more information on his Website (http://www.holub.com). This story, "Why getter and setter methods are evil" was originally published by JavaWorld.
+
+> I felt a need to include the above as it is.
+
