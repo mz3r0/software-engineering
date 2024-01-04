@@ -415,3 +415,25 @@ It's okay for a method to return an object in terms of an interface that the obj
 Next, I think of all OO systems as having a procedural boundary layer. The vast majority of OO programs runs on procedural operating systems and talks to procedural databases. The interfaces to these external procedural subsystems are generic by nature. Java Database Connectivity (JDBC) designers don't have a clue about what you'll do with the database, so the class design must be unfocused and highly flexible. Normally, unnecessary flexibility is bad, but in these boundary APIs, the extra flexibility is unavoidable. These boundary-layer classes are loaded with accessor methods simply because the designers have no choice.
 
 In fact, this not-knowing-how-it-will-be-used problem infuses all Java packages. It's difficult to eliminate all the accessors if you can't predict how you will use the class's objects. Given this constraint, Java's designers did a good job hiding as much implementation as they could. This is not to say that the design decisions that went into JDBC and its ilk apply to your code. They don't. We _do_ know how we will use the classes, so you don't have to waste time building unnecessary flexibility.
+
+##### A design strategy & CRC
+
+The OO design process centers on use cases: a user performs standalone tasks that have some useful outcome. (Logging on is not a use case because it lacks a useful outcome in the problem domain. Drawing a paycheck is a use case). An OO system, then, implements the activities needed to play out the various scenarios that comprise a use case. The runtime objects that play out the use case do so by sending messages to one another. Not all messages are equal, however. **You haven't accomplished much if you've just built a procedural program that uses objects and classes**.
+
+The CRC card is mentioned, which is relevant here. Class-responsibility-collaboration (CRC) cards are a brainstorming tool used in the design of object-oriented software. They were originally proposed by Ward Cunningham and Kent Beck as a teaching tool but are also popular among expert designers and recommended by extreme programming practitioners.
+
+Brief explanation. CRC cards are usually created from index cards, meaning they're small and portable. Members of a brainstorming session will write one CRC card for each relevant class/object of their design. The card is partitioned into three areas:
+1) The top for the class name
+2) The left for the responsibilities of the class
+3) The right for collaborators (other classes) with which the class interacts to fulfill its responsibilities.
+
+Additionally, using small cards minimizes the complexity of the design, reduces class responsibilities and keeps designers focused on the essentials.
+
+The classes then act out based on the following rules.
+- Perform the activities that comprise the use case by talking to one another.
+- You can only talk to your collaborators. If you must talk to someone else, you should talk to a collaborator who can talk to the other person. If that isn't possible, add a collaborator to your CRC card.
+- You may not ask for the information you need to do something. Rather, you must ask the collaborator who has the information to do the work. It's okay to pass to that collaborator information he needs to do the work, **but keep this interaction to a minimum**.
+- If something needs to be done and nobody can do it, create a new class (and CRC card) or add a responsibility to an existing class (and CRC card).
+- If a CRC card gets too full, you must create another class (CRC card) to handle some of the responsibilities. Complexity is limited by what you can fit on a 4x6 index card.
+
+The process Holub just described _is_ the OO design process, albeit simplified for a classroom environment. Some people design real programs this way using CRC cards. More often than not, however, designers develop the dynamic and static models in Unified Modeling Language (UML). The point is that an OO system is a conversation between objects. If you think about it for a moment, get/set methods just don't come up when you have a conversation. By the same token, get/set methods won't appear in your code if you design in this manner before you start coding.
