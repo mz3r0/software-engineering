@@ -403,3 +403,13 @@ Without a clearly defined dynamic model, you're only guessing how you will use a
 Accessors also end up in designs by force of habit. When procedural programmers adopt Java, they tend to start by building familiar code. Procedural languages don't have classes, but they do have the C `struct` (think: class without methods). It seems natural, then, to mimic a `struct` by building class definitions with virtually no methods and nothing but `public` fields. These procedural programmers read somewhere that fields should be `private`, however, so they make the fields `private` and supply `public` accessor methods. But they have only complicated the public access. They certainly haven't made the system object oriented.
 
 > In a nutshell: The whole point of an abstraction layer is to isolate your business logic from a subsystem's mechanics.
+
+##### When is an accessor okay?
+
+It's okay for a method to return an object in terms of an interface that the object implements because that interface isolates you from changes to the implementing class. This sort of method (that returns an interface reference) is not really a "getter" in the sense of a method that just provides access to a field.
+
+> **TODO: Find code examples for this case**
+
+Next, I think of all OO systems as having a procedural boundary layer. The vast majority of OO programs runs on procedural operating systems and talks to procedural databases. The interfaces to these external procedural subsystems are generic by nature. Java Database Connectivity (JDBC) designers don't have a clue about what you'll do with the database, so the class design must be unfocused and highly flexible. Normally, unnecessary flexibility is bad, but in these boundary APIs, the extra flexibility is unavoidable. These boundary-layer classes are loaded with accessor methods simply because the designers have no choice.
+
+In fact, this not-knowing-how-it-will-be-used problem infuses all Java packages. It's difficult to eliminate all the accessors if you can't predict how you will use the class's objects. Given this constraint, Java's designers did a good job hiding as much implementation as they could. This is not to say that the design decisions that went into JDBC and its ilk apply to your code. They don't. We _do_ know how we will use the classes, so you don't have to waste time building unnecessary flexibility.
