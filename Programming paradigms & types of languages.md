@@ -465,3 +465,16 @@ Modeling in UML is also relevant here. There are four ways of composing objects 
 The "open/closed principle" advocates that classes and functions "should be open for extension, but closed for modification". This is one of the SOLID set of principles.
 
 > **TODO: Add a link here** when I finish the programming design patterns document
+
+#### Abstract classes
+
+In a language that supports inheritance, an abstract class is a class that cannot be directly instantiated. Instantiation of an abstract class can occur only indirectly, via a concrete subclass. Abstract classes exist only to be inherited.
+
+An abstract class is either labeled as such explicitly or it may simply specify abstract methods (aka virtual methods). An abstract class may provide implementations of some methods, and may also specify virtual methods via signatures that are to be implemented by direct or indirect descendants of the abstract class. In other words, before instantiating a class derived from an abstract class, all abstract methods of its parent classes must be implemented by some class in the derivation chain.
+
+For example, in Java, C# and PHP, the keyword `abstract` is used. In C++, an abstract class is a class having at least one abstract method given by the appropriate syntax in that language (a pure virtual function in C++ parlance).
+
+> In C++ there is the concept of a virtual function and a pure virtual function. A virtual function is a member function of a base class which _may or may not_ be overridden by a class in the derivation chain. This means that a virtual function defines code and may or may not be redefined by a derived class. A pure virtual function is a member function of a base class whose only declaration is provided (so, no code) and _should be defined_ in the derived class. In this case, the base class is called an abstract class. Additionally, if the derived class doesn't define the pure virtual function, it also becomes abstract.
+
+A class consisting of only pure virtual methods is called a pure abstract base class (or pure ABC) in C++ and is essentially known as an interface. Such a class can only contain abstract publicly accessible methods. Other languages, notably Java and C#, support interfaces (a variant of ABCs) via a keyword in the language. In these languages, multiple inheritance is not allowed, but a class can implement multiple interfaces.
+
