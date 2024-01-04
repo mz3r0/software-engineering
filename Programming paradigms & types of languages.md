@@ -478,3 +478,16 @@ For example, in Java, C# and PHP, the keyword `abstract` is used. In C++, an abs
 
 A class consisting of only pure virtual methods is called a pure abstract base class (or pure ABC) in C++ and is essentially known as an interface. Such a class can only contain abstract publicly accessible methods. Other languages, notably Java and C#, support interfaces (a variant of ABCs) via a keyword in the language. In these languages, multiple inheritance is not allowed, but a class can implement multiple interfaces.
 
+#### Multiple inheritance
+
+**Multiple inheritance** is a feature of some object-oriented computer programming languages in which an object or class can inherit features from more than one parent object or parent class. It has been a controversial issue for many years with opponents pointing to its increased complexity and ambiguity in situations such as the "diamond problem".
+
+The "diamond problem" (sometimes referred to as the "Deadly Diamond of Death") is an ambiguity that arises when two classes B and C inherit from A, and class D inherits from both B and C. If there is a method in A that B and C have overridden, and D does not override it, then which version of the method does D inherit: that of B, or that of C?  
+
+Languages have different ways of dealing with problems of repeated inheritance.
+- C++ uses what is called virtual inheritance. Virtual inheritance prevents the same fields of class A to be duplicated in class D, in the context of the diamond problem.
+- Python has the same structure as Perl, but, unlike Perl, includes it in the syntax of the language. The order of inheritance affects the class semantics. Python had to deal with this upon the introduction of new-style classes, all of which have a common ancestor, object. Python creates a list of classes using the [C3 linearization](https://en.wikipedia.org/wiki/C3_linearization) (or Method Resolution Order (MRO)) algorithm. That algorithm enforces two constraints: children precede their parents and if a class inherits from multiple classes, they are kept in the order specified in the tuple of the base classes (however in this case, some classes high in the inheritance graph may precede classes lower in the graph).
+
+> I don't fully understand how this works in python so I might update this section in the future.
+
+The diamond problem can be addressed in various ways (for languages, see [Mitigation](https://en.wikipedia.org/wiki/Multiple_inheritance#Mitigation) on Wikipedia), including alternate methods of object composition not based on inheritance such as **mixins** and **traits** that have been proposed.
