@@ -491,3 +491,30 @@ Languages have different ways of dealing with problems of repeated inheritance.
 > I don't fully understand how this works in python so I might update this section in the future.
 
 The diamond problem can be addressed in various ways (for languages, see [Mitigation](https://en.wikipedia.org/wiki/Multiple_inheritance#Mitigation) on Wikipedia), including alternate methods of object composition not based on inheritance such as **mixins** and **traits** that have been proposed.
+
+##### Mixins
+
+From [Mixin](https://en.wikipedia.org/wiki/Mixin) on Wikipedia: In object-oriented programming languages, a mixin (or mix-in) is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin's methods depends on the language. Mixins are sometimes described as being "included" rather than "inherited".
+
+For example, class `UnicodeConversionMixin` might provide a method `unicode_to_ascii()` when included in class `FileReader` and class `WebPageScraper`, which do not share a common parent.
+
+**A mixin can also be viewed as an interface with implemented methods**. This pattern is an example of enforcing the dependency inversion principle, which is part of the SOLID set of principles.
+
+> **TODO: Add a link here** when I finish the programming design patterns document
+
+Mixins allow inheritance and use of only the desired features from the parent "class".
+
+> **TODO: Add more info on how particular features are chosen.** This is a feature of traits (see below)
+
+In Python, an example of the mixin concept is found in the `SocketServer` module, which has both a `UDPServer` class and a `TCPServer` class. They act as servers for UDP and TCP socket servers, respectively. Additionally, there are two mixin classes: `ForkingMixIn` and `ThreadingMixIn`. Normally, all new connections are handled within the same process. By extending `TCPServer` with the `ThreadingMixIn` as follows:
+
+```python
+class ThreadingTCPServer(ThreadingMixIn, TCPServer):
+    pass
+```
+
+The `ThreadingMixIn` class adds functionality to the TCP server such that each new connection creates a new thread. Using the same method, a `ThreadingUDPServer` can be created without having to duplicate the code in `ThreadingMixIn`. Alternatively, using the `ForkingMixIn` would cause the process to be forked for each new connection. Clearly, the functionality to create a new thread or fork a process is not terribly useful as a stand-alone class.
+
+In this usage example, the mixins provide alternative underlying functionality without affecting the functionality as a socket server.
+
+Languages that use mixins include: C#, MATLAB, Python, PHP's traits, Ruby, Scala, Swift, Java, JavaScript.
