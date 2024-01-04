@@ -452,7 +452,7 @@ Allen Holub has worked in the computer industry since 1979. He currently works a
 
 ### Composition, inheritance, and delegation
 
-Composition defines a has-a relationship; a car has wheels. In terms of code, we would have a Car class with fields of the Wheel class. Inheritance defines an is-a relationship; an apple is a fruit. In terms of code, we would have an Apple class that inherits all fields and methods from the Fruit class and possibly adding its own fields and methods.
+Composition defines a has-a relationship; a car has wheels. In terms of code, we would have a Car class with fields of the Wheel class. Inheritance defines an is-a relationship; an apple is a fruit. In terms of code, we would have an Apple class that inherits all fields and methods from the Fruit class and possibly adding its own fields and methods. In inheritance, subclasses can override the methods defined by super-classes or parent-classes.
 
 > **Important side note:** All methods are functions, but only those functions defined inside a class can be called methods.
 
