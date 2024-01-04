@@ -285,7 +285,7 @@ Data-driven programming is similar to event-driven programming, in that both are
 
 ---
 
-## Object-Oriented
+## Object-Oriented programming
 
 **Object-oriented programming** (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields / attributes / properties, and code in the form of procedures / methods. A common feature is the special name `this` or `self` which is used to refer to the current object and its fields or methods. OOP originates from MIT in the late 1950s and early 1960s.
 
