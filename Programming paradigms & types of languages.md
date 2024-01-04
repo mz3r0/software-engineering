@@ -450,3 +450,18 @@ Allen Holub has worked in the computer industry since 1979. He currently works a
 
 > I felt a need to include the above as it is.
 
+### Composition, inheritance, and delegation
+
+Composition defines a has-a relationship; a car has wheels. In terms of code, we would have a Car class with fields of the Wheel class. Inheritance defines an is-a relationship; an apple is a fruit. In terms of code, we would have an Apple class that inherits all fields and methods from the Fruit class and possibly adding its own fields and methods.
+
+> **Important side note:** All methods are functions, but only those functions defined inside a class can be called methods.
+
+Some languages, like Go do not support inheritance at all. In Java, the `final` keyword can be used to prevent a class from being sub-classed. Preventing sub-classing is a feature of some languages.
+
+A term related to composition is aggregation. Composition defines a strong has-a relationship, while aggregation defines a weak has-a relationship. Given classes X, C and A, if X is composed of objects of type C, then we have composition and once the object of type X ceases to exist, its composite C objects are also deleted. By using aggregation, objects of class X would have **references** to objects of class A. Deleting a class X object wouldn't affect objects of class A as they're independent and would continue to exist in memory.
+
+Modeling in UML is also relevant here. There are four ways of composing objects in UML: property, association, aggregation and composition. [UML on Wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language)
+
+The "open/closed principle" advocates that classes and functions "should be open for extension, but closed for modification". This is one of the SOLID set of principles.
+
+> **TODO: Add a link here** when I finish the programming design patterns document
