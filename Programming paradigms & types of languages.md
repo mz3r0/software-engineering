@@ -378,6 +378,8 @@ Sources: InfoWorld [article](https://www.infoworld.com/article/2073723/why-gette
 
 #### More on the topic from Allen Holub's column
 
+> Note that a big part of this section has not been paraphrased at all. Credits go to Allen Holub.
+
 ##### On the nature of design
 
 It's not an accident that every chapter in the Gang of Four's _Design Patterns_ book includes a "Consequences" section that describes when and why using a pattern is inappropriate.
