@@ -625,3 +625,19 @@ I feel like the rest of the information in this section lacks ground so I includ
 > Despite explicit delegation being fairly widespread, relatively few major programming languages implement delegation as an alternative model to inheritance.
 
 > Delegation has the advantage that it can take place at run time and affect only a subset of entities of some type and can even be removed at run time. Inheritance, by contrast, typically targets the type rather than the instances, and is restricted to compile time. On the other hand, inheritance can be statically type-checked, while delegation generally cannot without generics (although a restricted version of delegation can be statically type-safe. [Wikipedia Citation](https://en.wikipedia.org/wiki/Delegation_(object-oriented_programming)#cite_note-8)).
+
+### Polymorphism
+
+In programming language theory and type theory, polymorphism is the use of a single symbol or a single interface to represent entities of different types.
+
+The most commonly recognized major forms of polymorphism are:
+- **Ad hoc polymorphism**: defines a common interface for an arbitrary set of individually specified types. Examples include function overloading or operator overloading when we want to perform an addition operation whose implementation differs depending on the type. In dynamically typed languages the situation can be more complex as the correct function that needs to be invoked might only be determinable at run time. Implicit type conversion has also been defined as a form of polymorphism, referred to as "**coercion polymorphism**".
+- **Parametric polymorphism**: not specifying concrete types and instead use abstract / generic symbols that can substitute for any type. A common example are templates in java: `List<String> x`. Related keywords are generics and templates. **Parametric polymorphism is a way to make a language more expressive while still maintaining full static type-safety**. Parametric polymorphism is ubiquitous in functional programming, where it is often simply referred to as "polymorphism". 
+- **Subtyping** (also called subtype polymorphism or inclusion polymorphism): when a name denotes instances of many different classes related by some common superclass. In subtyping code can be independent of which class in the supported hierarchy it is operating on – the parent class or one of its descendants. For example, objects of type Circle and Square are derived from a common class called Shape. The Draw function for each type of Shape implements what is necessary to draw itself while calling code can remain indifferent to the particular type of Shape being drawn. This is another type of abstraction that simplifies code external to the class hierarchy and enables strong separation of concerns.
+- Additional less known and interesting-sounding concepts include: Row polymorphism, Polytypism, Rank Polymorphism.
+
+In a nutshell, the subtyping type of polymorphism most commonly seen in OOP is the process of adding detail to a general data type to create a more specific data type.
+
+#### Ad hoc polymorphism vs Subtyping
+
+Currently reading the following [SO article](https://cs.stackexchange.com/questions/82485/is-subtype-polymorphism-a-kind-of-ad-hoc-polymorphism) and [this reddit thread](https://www.reddit.com/r/scala/comments/n7c3be/when_is_it_preferable_to_use_ad_hoc_polymorphism/) which links to [polymorphism in scala by BalmungSan](https://gist.github.com/BalmungSan/c19557030181c0dc36533f3de7d7abf4)
