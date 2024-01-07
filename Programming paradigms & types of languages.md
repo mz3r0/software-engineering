@@ -531,3 +531,97 @@ Traits solve these problems by allowing classes to use the trait and get the des
 
 > **TODO: Explore traits and how they could be simulated using mixins or interfaces.**
 
+#### Delegation
+
+In OOP, delegation refers to evaluating a member of one object (receiver or delegate) in the context of another object (sender or original). In other words, the delegate is a helper object that takes the responsibility of the original object, but with the original context. It is said that in object-oriented design, delegation uses composition to achieve the same code reuse as inheritance, i.e. with a delegation link.
+
+> From the Introduction to Gamma et al. 1994: Delegation is a way to make composition as powerful for reuse as inheritance (Lie86, JZ91). Some sources complicate the definition by using the term 'receiver' which can refer to both the initial object that receives the request and the delegate object that handles it after it receives the request from the initial object. I hope that makes sense.
+
+Inheritance is also described as 'implicit delegation' by using `self` which becomes evident in the example below. In the delegate pattern however, this is instead accomplished by explicitly passing the original object to the delegate (or a reference to it), as an argument to a method.
+
+> Inheritance (or implicit delegation) makes use of the member lookup rules of the programming language by dispatching so-called [self-calls](https://en.wikipedia.org/w/index.php?title=Self-call&action=edit&redlink=1 "Self-call (page does not exist)") defined by [Lieberman](https://en.wikipedia.org/wiki/Henry_Lieberman "Henry Lieberman") in his 1986 paper "Using Prototypical Objects to Implement Shared Behavior in Object-Oriented Systems".
+> In delegation the binding of `self` is characterized late, as it happens at 'evaluation time' which I assume means runtime. Source: [Delegation in OOP, Wikipedia](https://en.wikipedia.org/wiki/Delegation_(object-oriented_programming))
+##### Delegation Example & Object schizophrenia
+
+Calling `b.foo()` in both cases prints `b.bar`. The `this` keyword in the delegation example is described as ambiguous. The ambiguity disappears when using inheritance, in the second code snippet, thus making it more useful and desirable.
+
+**Delegation**
+```java
+class A {
+    void foo() {
+        // "this" aka "current", "me" and "self" in other languages
+        this.bar();
+    }
+    
+    void bar() {
+        print("a.bar");
+    }
+}
+
+class B {
+    private delegate A a; // delegation link
+    
+    public B(A a) {
+    
+        this.a = a;
+    }
+    
+    void foo() {
+        a.foo(); // call foo() on the a-instance
+    }
+    
+    void bar() {
+        print("b.bar");
+    }
+}
+
+a = new A();
+b = new B(a); // establish delegation between two objects
+b.foo();
+```
+
+**Inheritance**
+```java
+class A {
+    void foo() {
+        this.bar();
+    }
+    void bar() {
+        print("A.bar");
+    }
+}
+
+class B extends A {
+    public B() {}
+    
+    void foo() {
+        super.foo(); // call foo() of the superclass (A)
+    }
+    
+    void bar() {
+        print("B.bar");
+    }
+}
+
+b = new B();
+b.foo();
+```
+
+**Object schizophrenia** or **self schizophrenia** is a complication arising from delegation and related techniques in OOP, where `self` / `this` can refer to more than one object.
+##### Additional content on this topic
+
+Check out this less theoretical and insightful post on SO: [What is a delegate in OOP](https://stackoverflow.com/questions/2044301/what-is-delegate)
+
+A related concept is _forwarding_ where one sender-object simply uses a member of another receiver-object, evaluated in the context of the _receiver-object_. Forwarding is different from delegation and they particularly differ in the context used to evaluate a request from the sender-object.
+
+The precise relationship between delegation and inheritance is complicated; some authors consider them equivalent, or one a special case of the other.
+
+In the below excerpt from the Wikipedia article, a 'delegation link' is contrasted to an object reference. To me, this makes no sense, unless there's some implementation detail implied about the term 'object reference' thus making 'delegation link' more general, **but I'm not entirely sure**.
+
+> In languages that support delegation via method lookup rules, method dispatching is defined the way it is defined for virtual methods in inheritance: It is always the most specific method that is chosen during method lookup. Hence it is the _original_ receiver entity that is the start of method lookup even though it has passed on control to some other object (through a delegation link, not an object reference).
+
+I feel like the rest of the information in this section lacks ground so I included it purely as a pointer to more advanced details.
+
+> Despite explicit delegation being fairly widespread, relatively few major programming languages implement delegation as an alternative model to inheritance.
+
+> Delegation has the advantage that it can take place at run time and affect only a subset of entities of some type and can even be removed at run time. Inheritance, by contrast, typically targets the type rather than the instances, and is restricted to compile time. On the other hand, inheritance can be statically type-checked, while delegation generally cannot without generics (although a restricted version of delegation can be statically type-safe. [Wikipedia Citation](https://en.wikipedia.org/wiki/Delegation_(object-oriented_programming)#cite_note-8)).
