@@ -650,3 +650,15 @@ Examples include function overloading or operator overloading when we want to pe
 In subtyping code can be independent of which class in the supported hierarchy it is operating on – the parent class or one of its descendants. For example, objects of type Circle and Square are derived from a common class called Shape. The Draw function for each type of Shape implements what is necessary to draw itself while calling code can remain indifferent to the particular type of Shape being drawn. This is another type of abstraction that simplifies code external to the class hierarchy and enables strong separation of concerns.
 
 > In a nutshell: The subtyping type of polymorphism most commonly seen in OOP is the process of adding detail to a general data type to create a more specific data type.
+
+### Ad hoc vs Subtyping
+
+From the following [StackExchange post](https://cs.stackexchange.com/questions/82485/is-subtype-polymorphism-a-kind-of-ad-hoc-polymorphism):
+
+Strachey distinguished between **parametric** polymorphism, where there is no information about the actual type and _any_ type can be passed as an argument, and **ad hoc** where an arbitrary set of types has been nominated as acceptable. Subtyping is not parametric polymorphism because a specific type (the superclass) _is_ known. So the question is, is it ad-hoc?
+
+The choice of the term **ad hoc** emphasizes that there need be no relationship between the different types in a given abstraction; the only unifying factor is the existence of concrete implementations that make them part of the set. Operator overloading and Haskell's type classes fit that criteria.
+
+In contrast, subtyping requires a relationship between the subtypes and the supertype, one that allows subtypes to be used in place of the supertype. The currently-existing set of subtypes is only arbitrary in the sense that all code is arbitrary - being the set of code developers have chosen to write. While the implementation of each subtype can be entirely distinct and unique, the substitutability requirement means that inclusion in the set of acceptable types is principled and not ad hoc.
+
+Another interesting read is [Polymorphism in Scala by BalmungSan](https://gist.github.com/BalmungSan/c19557030181c0dc36533f3de7d7abf4)
