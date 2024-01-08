@@ -662,3 +662,15 @@ The choice of the term **ad hoc** emphasizes that there need be no relationshi
 In contrast, subtyping requires a relationship between the subtypes and the supertype, one that allows subtypes to be used in place of the supertype. The currently-existing set of subtypes is only arbitrary in the sense that all code is arbitrary - being the set of code developers have chosen to write. While the implementation of each subtype can be entirely distinct and unique, the substitutability requirement means that inclusion in the set of acceptable types is principled and not ad hoc.
 
 Another interesting read is [Polymorphism in Scala by BalmungSan](https://gist.github.com/BalmungSan/c19557030181c0dc36533f3de7d7abf4)
+
+Duck typing is a related term, yet different from polymorphism. Polymorphism is a concept found on types, whereas duck typing is found on contracts. In polymorphism we encounter subclasses that inherit from a parent and override its methods. In the case of duck typing we instead create a new class with the same methods (so, methods have the same name) but different function; no subclassing involved. So, duck typing means code will simply accept any object that has a particular method. If a given object `animal` has the a `quack` method that we want to call, then we're good (no additional type requirements needed). It does not matter whether `animal` is actually a `Duck` or a different animal which also happens to quack. That's why it is called duck typing: if it looks like a duck then we can act as if that object is a duck).
+
+The above is a mix of the answers provided in this [StackOverflow post](https://stackoverflow.com/questions/11502433/what-is-the-difference-between-polymorphism-and-duck-typing) about the difference between polymorphism and duck typing. Andy's answer is particularly insightful.
+
+Another related term is the [structural type](https://en.wikipedia.org/wiki/Structural_type_system).
+
+Another related term is the [type class](https://en.wikipedia.org/wiki/Type_class). Type classes seem to be related to polymorphism in the context of ad hoc polymorphism and specifically by adding constraints to type variables in parametrically polymorphic types. This allows functions and operators to be reused with many different types and have different behaviors depending on the instance of the type class.
+
+While I don't have my mind fully (or even partly) wrapped around type classes, this [StackExchange post](https://cs.stackexchange.com/questions/129161/how-do-type-classes-make-ad-hoc-polymorphism-less-ad-hoc) has a couple useful links that I haven't yet explored.
+
+> **TODO: Read on the above and expand this section**
