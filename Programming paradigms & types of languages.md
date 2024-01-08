@@ -674,3 +674,21 @@ Another related term is the [type class](https://en.wikipedia.org/wiki/Type_clas
 While I don't have my mind fully (or even partly) wrapped around type classes, this [StackExchange post](https://cs.stackexchange.com/questions/129161/how-do-type-classes-make-ad-hoc-polymorphism-less-ad-hoc) has a couple useful links that I haven't yet explored.
 
 > **TODO: Read on the above and expand this section**
+
+### Behavioral subtyping
+
+In object-oriented programming, **behavioral subtyping** is the principle that subclasses should satisfy the expectations of clients accessing subclass objects through references of superclass type, not just as regards syntactic safety (such as the absence of "method-not-found" errors) but also as regards _behavioral correctness_.
+
+Behavioral subtyping is undecidable in general. Subtype polymorphism as enforced by the type checker in OOP languages (with mutable objects) cannot guarantee behavioral subtyping in any context. Class or object hierarchies must be carefully designed, considering possible incorrect uses that cannot be detected syntactically.
+
+For example, both a Queue class and a Stack class have a put and a get method. A queue exhibits FIFO behavior, while a stack exhibits LIFO behavior. Clients accessing a Stack object through a reference of type Queue would expect FIFO behavior but observe LIFO behavior, invalidating these clients' correctness proofs and potentially leading to incorrect behavior of the program as a whole. In contrast, a program where both Stack and Queue are subclasses of a type Bag, whose specification for _get_ is merely that it removes _some_ element, does satisfy behavioral subtyping and allows clients to safely reason about correctness based on the presumed types of the objects they interact with. Indeed, any object that satisfies the Stack or Queue specification also satisfies the Bag specification.
+
+This intuition that objects of a subclass can _safely_ substitute objects from the parent class is unfortunately false in most OOP languages, in particular in all those that allow mutable objects. Mutability leads to the violation of the expected behavior (citation needed). In a language with immutable objects, behavioral subtyping could work more effectively, as the state of the objects cannot be changed, ensuring that the expected behavior of the supertype is maintained.
+
+The Liskov substitution principle, which is a fundamental concept in object-oriented programming, states that "if S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program". However, when mutable objects are involved, this substitution may lead to unexpected behavior, violating the principle.
+
+> **TODO: Add a link here** when I finish the programming design patterns document
+
+A study presented a model-theoretic analysis of correct behavioral subtyping for first-order, deterministic, abstract data types with immutable objects, indicating that behavioral subtyping could be effectively characterized in the context of immutable object. [Link to study](https://dr.lib.iastate.edu/entities/publication/289b6e26-fde7-4906-a118-00acdaf6567b/full) This study was found using Perplexity AI.
+
+> **TODO: Read the study & expand this section.**
