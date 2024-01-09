@@ -706,3 +706,19 @@ Object databases, which have been considered since the early 1980s, are differen
 A third type, **object–relational databases (ORD)**, is the hybrid of both approaches mentioned earlier. An OODB model allows containers like sets and lists, arbitrary user-defined datatypes as well as nested objects. The info on Wikipedia makes these concepts a bit confusing, so more insight is definitely welcome.
 
 "These alternative solutions have not been as technically and commercially successful as RDBMSs."
+
+### Object-relational mapping
+
+**Object–relational mapping** (**ORM**, **O/RM**, and **O/R mapping** tool) in computer science is a programming technique for converting data between a relational database and the heap of an object-oriented programming language.
+
+Object–relational mapping provides automated support for mapping tuples to objects and back, while accounting for all of these differences. For example, consider an address book entry that represents a single person along with zero or more phone numbers and zero or more addresses. This could be modeled in an object-oriented implementation by a "Person object" with an attribute/field to hold each data item that the entry comprises: the person's name, a list of phone numbers, and a list of addresses. The list of phone numbers would itself contain "PhoneNumber objects" and so on. Each such address-book entry is treated as a single object by the programming language (it can be referenced by a single variable containing a pointer to the object, for instance). By contrast, relational databases, such as SQL, group scalars into tuples, which are then enumerated in tables. Tuples and objects have some general similarity, in that they are both ways to collect values into named fields such that the whole collection can be manipulated as a single compound entity. They have many differences, though, in particular:
+- lifecycle management (row insertion and deletion, versus garbage collection or reference counting)
+- references to other entities (object references, versus foreign key references)
+- inheritance (non-existent in relational databases)
+- and objects being managed on-heap, under the full control of a single process, while database tuples being shared, having to incorporate locking, merging, and retry
+
+The heart of the problem involves translating the logical representation of the objects into an atomized form that is capable of being stored in the database while preserving the properties of the objects and their relationships so that they can be reloaded as objects when needed. If this storage and retrieval functionality is implemented, the objects are said to be **persistent**.
+
+Disadvantages of ORM tools generally stem from the high level of abstraction obscuring what is actually happening in the implementation code. Also, heavy reliance on ORM software has been cited as a major factor in producing poorly designed databases.
+
+> **TODO: This latter point needs some elaborating.**
