@@ -692,3 +692,17 @@ The Liskov substitution principle, which is a fundamental concept in object-orie
 A study presented a model-theoretic analysis of correct behavioral subtyping for first-order, deterministic, abstract data types with immutable objects, indicating that behavioral subtyping could be effectively characterized in the context of immutable object. [Link to study](https://dr.lib.iastate.edu/entities/publication/289b6e26-fde7-4906-a118-00acdaf6567b/full) This study was found using Perplexity AI.
 
 > **TODO: Read the study & expand this section.**
+
+### Object-orientation and databases
+
+Both OOP and relational database management systems (RDBMSs) are extremely common in software today. Since relational databases do not store objects directly (though some RDBMSs have OO features to approximate this), there is a general need to bridge the two worlds. The problem responsible for this bridging is known as **object-relational impedance mismatch**. The term originates from impedance matching in electrical engineering.
+
+There's no general solution without downsides. One of the most common approaches is **object-relational mapping (ORM)**, as found in IDE languages such as Visual FoxPro and libraries such as Java Data Objects and Ruby on Rails' ActiveRecord. To clarify, the mismatch is not between OO and DBMSes. Object-relational impedance mismatch is eponymously only between OO and **R**DBMSes. Alternatives like NoSQL or XML databases don't have this problem. More on [Minimization in OO here](https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch#Minimization_in_OO).
+
+Object databases, which have been considered since the early 1980s, are different from (table-oriented) relational databases. An object database is also referred to as an OO data store or OO database (or OODB I guess).
+
+> **TODO**: See how these 'object databases' are different from other types of DBs.
+
+A third type, **object–relational databases (ORD)**, is the hybrid of both approaches mentioned earlier. An OODB model allows containers like sets and lists, arbitrary user-defined datatypes as well as nested objects. The info on Wikipedia makes these concepts a bit confusing, so more insight is definitely welcome.
+
+"These alternative solutions have not been as technically and commercially successful as RDBMSs."
