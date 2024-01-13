@@ -730,3 +730,7 @@ More formally, in software, a **data access object** is a pattern that provides 
 I think the "persistence layer" can also be termed as "data access layer".
 
 > **TODO: Add a link here** when I finish the programming design patterns document
+
+Potential disadvantages of using DAO include [leaky abstraction](https://en.wikipedia.org/wiki/Leaky_abstraction), code duplication, and [abstraction inversion](https://en.wikipedia.org/wiki/Abstraction_inversion). In particular, the abstraction of the DAO as a regular Java object can obscure the high cost of each database access. Developers may inadvertently make multiple database queries to retrieve information that could be returned in a single operation. If an application requires multiple DAOs, the same create, read, update, and delete code may have to be written for each DAO.
+
+More alternatives to implementing ORM include OODBMS and **document-oriented databases** (such as native XML databases that provide more flexibility in data modeling). The equivalent of ORMs for document-oriented databases are called **object-document mappers (ODMs)**. Document-oriented databases also prevent the user from having to "shred" objects into table rows. Many of these systems also support the XQuery query language to retrieve datasets.
