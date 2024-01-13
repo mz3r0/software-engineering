@@ -728,3 +728,5 @@ An alternative to implementing ORM is to make use of the native procedural langu
 More formally, in software, a **data access object** is a pattern that provides an abstract interface to some type of database or other persistence mechanism. By mapping application calls to the persistence layer, the DAO provides data operations without exposing database details. This isolation supports the single responsibility principle. In a few words, it achieves abstraction; changing business logic can rely on a constant DAO interface, while changes to persistence logic do not affect DAO clients.
 
 I think the "persistence layer" can also be termed as "data access layer".
+
+> **TODO: Add a link here** when I finish the programming design patterns document
