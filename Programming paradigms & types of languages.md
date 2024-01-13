@@ -735,6 +735,10 @@ Potential disadvantages of using DAO include [leaky abstraction](https://en.wiki
 
 More alternatives to implementing ORM include OODBMS and **document-oriented databases** (such as native XML databases that provide more flexibility in data modeling). The equivalent of ORMs for document-oriented databases are called **object-document mappers (ODMs)**. Document-oriented databases also prevent the user from having to "shred" objects into table rows. Many of these systems also support the XQuery query language to retrieve datasets.
 
+To get a better understanding, I read the following 2 sections on:
+- ORM, DAO and DTO
+- Document-oriented database
+
 #### ORM, DAO and DTO
 
 I've noticed the terms ORM, DAO and DTO used together while reading about ORMs, which confused me at first. A DTO (Data Transfer Object) is an object used for transferring data, generally from the controller to the client/application.
