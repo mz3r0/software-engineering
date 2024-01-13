@@ -734,3 +734,14 @@ I think the "persistence layer" can also be termed as "data access layer".
 Potential disadvantages of using DAO include [leaky abstraction](https://en.wikipedia.org/wiki/Leaky_abstraction), code duplication, and [abstraction inversion](https://en.wikipedia.org/wiki/Abstraction_inversion). In particular, the abstraction of the DAO as a regular Java object can obscure the high cost of each database access. Developers may inadvertently make multiple database queries to retrieve information that could be returned in a single operation. If an application requires multiple DAOs, the same create, read, update, and delete code may have to be written for each DAO.
 
 More alternatives to implementing ORM include OODBMS and **document-oriented databases** (such as native XML databases that provide more flexibility in data modeling). The equivalent of ORMs for document-oriented databases are called **object-document mappers (ODMs)**. Document-oriented databases also prevent the user from having to "shred" objects into table rows. Many of these systems also support the XQuery query language to retrieve datasets.
+
+#### ORM, DAO and DTO
+
+I've noticed the terms ORM, DAO and DTO used together while reading about ORMs, which confused me at first. A DTO (Data Transfer Object) is an object used for transferring data, generally from the controller to the client/application.
+
+[From this SO post](https://stackoverflow.com/questions/4037251/dao-vs-ormhibernate-pattern) "ORM and DAO are orthogonal concepts. One has to do with how objects are mapped to database tables while the other is a design pattern for writing objects that access data. You don't choose 'between' them. You can have ORM and DAO in the same application, just as you don't need ORM to use the DAO pattern."
+
+[From this reddit post](https://www.reddit.com/r/learnprogramming/comments/183mhe8/can_it_be_said_that_dao_or_data_access_object_is/) and in looser terms "A DAO is a very simple thing, it performs an operation on the database and returns a dataset when applicable, no mapping, no tracking, no magic. An ORM on the other hand is usually a library that does everything an DAO does and a lot more, including mapping, tracking and magic." DTO seems to be a Java term, although I'm unsure if _strictly_, and Oracle could've explained it better.
+
+Another insightful [SO post](https://stackoverflow.com/questions/37644957/what-is-the-difference-between-dal-dto-and-dao-in-a-3-tier-architecture-style-i) talks about DAL (Data Access Layer), DTO, DAO and MVC.
+
