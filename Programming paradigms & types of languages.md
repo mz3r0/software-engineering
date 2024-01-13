@@ -722,3 +722,9 @@ The heart of the problem involves translating the logical representation of the 
 Disadvantages of ORM tools generally stem from the high level of abstraction obscuring what is actually happening in the implementation code. Also, heavy reliance on ORM software has been cited as a major factor in producing poorly designed databases.
 
 > **TODO: This latter point needs some elaborating.**
+
+An alternative to implementing ORM is to make use of the native procedural languages provided with every major database. These can be called from the client using SQL statements. The [Data Access Object](https://en.wikipedia.org/wiki/Data_access_object "Data access object") (DAO) design pattern is used to abstract these statements and offer a lightweight object-oriented interface to the rest of the application.
+
+More formally, in software, a **data access object** is a pattern that provides an abstract interface to some type of database or other persistence mechanism. By mapping application calls to the persistence layer, the DAO provides data operations without exposing database details. This isolation supports the single responsibility principle. In a few words, it achieves abstraction; changing business logic can rely on a constant DAO interface, while changes to persistence logic do not affect DAO clients.
+
+I think the "persistence layer" can also be termed as "data access layer".
