@@ -749,3 +749,14 @@ I've noticed the terms ORM, DAO and DTO used together while reading about ORMs, 
 
 Another insightful [SO post](https://stackoverflow.com/questions/37644957/what-is-the-difference-between-dal-dto-and-dao-in-a-3-tier-architecture-style-i) talks about DAL (Data Access Layer), DTO, DAO and MVC.
 
+#### Document-Oriented database
+
+A [document-oriented database](https://en.wikipedia.org/wiki/Document-oriented_database) or **document store**, is a computer program and data storage system designed for storing, retrieving and managing document-oriented information, also known as semi-structured data. Document-oriented databases are one of the main categories of NoSQL databases. The popularity of the term "document-oriented database" has grown with the use of the term NoSQL itself.
+
+The central concept of a document-oriented database is the notion of a _document_. While each document-oriented database implementation differs on the details of this definition, in general, they all assume documents encapsulate and encode data (or information) in some standard format or encoding. Encodings in use include [XML](https://en.wikipedia.org/wiki/XML "XML"), [YAML](https://en.wikipedia.org/wiki/YAML "YAML"), [JSON](https://en.wikipedia.org/wiki/JSON "JSON"), as well as binary forms like [BSON](https://en.wikipedia.org/wiki/BSON "BSON").
+
+[XML databases](https://en.wikipedia.org/wiki/XML_database "XML database") are a subclass of document-oriented databases that are optimized to work with [XML](https://en.wikipedia.org/wiki/XML "XML") documents. [Graph databases](https://en.wikipedia.org/wiki/Graph_databases "Graph databases") are similar, but add another layer, the _relationship_, which allows them to link documents for rapid traversal. Document-oriented databases are inherently a subclass of the [key-value store](https://en.wikipedia.org/wiki/Key-value_database "Key-value database"), another NoSQL database concept.
+
+Main article [on Wikipedia](https://en.wikipedia.org/wiki/Document-oriented_database)
+
+> **TODO: Expand on this section.**
