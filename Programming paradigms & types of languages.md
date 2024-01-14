@@ -799,6 +799,8 @@ and
 
 > [Steve Yegge](https://en.wikipedia.org/wiki/Steve_Yegge "Steve Yegge") and others noted that natural languages lack the OOP approach of strictly prioritizing _things_ (objects/nouns before _actions_ (methods/verbs). This problem may cause OOP to suffer more convoluted solutions than procedural programming.
 
+---
+
 ## Probabilistic Programming
 
 **Probabilistic programming** (PP) is a programming paradigm in which probabilistic models are specified and inference for these models is performed automatically. It represents an attempt to unify probabilistic modeling and traditional general purpose programming in order to make the former easier and more widely applicable. It can be used to create systems that help make decisions in the face of uncertainty.
