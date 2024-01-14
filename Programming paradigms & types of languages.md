@@ -760,3 +760,13 @@ The central concept of a document-oriented database is the notion of a _documen
 Main article [on Wikipedia](https://en.wikipedia.org/wiki/Document-oriented_database)
 
 > **TODO: Expand on this section.**
+
+### Responsibility- vs. data-driven design
+
+**Responsibility-driven design** defines classes in terms of a contract, that is, a class should be defined around a responsibility and the information that it shares. This is contrasted by Wirfs-Brock and Wilkerson with **data-driven design**, where classes are defined around the data-structures that must be held. The authors hold that responsibility-driven design is preferable.
+
+Note that there is only a data-driven _programming_ article on Wikipedia. "Data-driven design is not the same as data-driven programming, which is concerned with using data to determine the control flow, not class design." The above paragraph in the OOP article writes data-driven _design_ but links to the data-driven _programming_ article. **Kinda fishy**.
+
+Concerning classes, data-driven design is about designing your classes while first taking into consideration the the data structure and format used by messages that the classes send to each other.
+
+> This last part isn't made clear so far. More info needed on data-driven design.
