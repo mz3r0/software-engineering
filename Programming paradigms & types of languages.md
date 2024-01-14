@@ -770,3 +770,11 @@ Note that there is only a data-driven _programming_ article on Wikipedia. "Data-
 Concerning classes, data-driven design is about designing your classes while first taking into consideration the the data structure and format used by messages that the classes send to each other.
 
 > This last part isn't made clear so far. More info needed on data-driven design.
+
+#### Responsibility-driven design
+
+Main article [on Wikipedia](https://en.wikipedia.org/wiki/Responsibility-driven_design)
+
+Responsibility-driven design is a design technique in OOP, which focuses on the objects as behavioral abstractions which are characterized by their responsibilities. It considers the actions that the object is responsible for and the information that the object shares, or simply put; the contract. It was proposed by Rebecca Wirfs-Brock and Brian Wilkerson.
+
+The client-server model is used for the interaction between two classes or class instances and as long as requests are carried out according to a known specification, encapsulation can be increased and therefore improved. Another benefit is grouping classes together based on their clients, which is more evident when using CRC cards. The CRC-card modelling technique is used to generate the behavioral abstractions of classes while the rest of the object structure is assigned later, as and when required.
