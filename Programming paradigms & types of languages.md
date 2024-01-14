@@ -798,3 +798,13 @@ and
 and 
 
 > [Steve Yegge](https://en.wikipedia.org/wiki/Steve_Yegge "Steve Yegge") and others noted that natural languages lack the OOP approach of strictly prioritizing _things_ (objects/nouns before _actions_ (methods/verbs). This problem may cause OOP to suffer more convoluted solutions than procedural programming.
+
+## Probabilistic Programming
+
+**Probabilistic programming** (PP) is a programming paradigm in which probabilistic models are specified and inference for these models is performed automatically. It represents an attempt to unify probabilistic modeling and traditional general purpose programming in order to make the former easier and more widely applicable. It can be used to create systems that help make decisions in the face of uncertainty.
+
+Probabilistic reasoning has been used for predicting stock prices, recommending movies, diagnosing computers, detecting cyber intrusions and image detection. The Gen probabilistic programming library (written in Julia) has been applied to vision and robotics tasks. Probabilistic programming languages are also commonly used in Bayesian cognitive science to develop and evaluate models of cognition.
+
+PPLs often extend from a basic language. The choice of underlying basic language depends on the similarity of the model to the basic language's ontology, as well as commercial considerations and personal preference. For instance, Dimple and Chimple are based on Java, Infer.NET is based on .NET Framework, while PRISM extends from Prolog. However, some PPLs such as WinBUGS offer a self-contained language, that maps closely to the mathematical representation of the statistical models, with no obvious origin in another programming language. The language for winBUGS was implemented to perform Bayesian computation using Gibbs Sampling (and related algorithms). A probabilistic relational programming language (PRPL) is a PPL specially designed to describe and infer with probabilistic relational models (PRMs). PPL List on [Wikipedia](https://en.wikipedia.org/wiki/Probabilistic_programming)
+
+> This last paradigm doesn't feel as detailed as I hoped it would be, but if I had to keep expanding this document it'd be a low priority.
