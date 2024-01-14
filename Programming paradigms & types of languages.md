@@ -782,3 +782,19 @@ The client-server model is used for the interaction between two classes or class
 > To further the encapsulation of the server, Wirfs-Brock and Wilkerson call for language features that limit outside influence to the behavior of a class. They demand that the visibility of members and functions should be finely grained, such as in THE Eiffel programming language. Even finer control of the visibility of even classes is available in the Newspeak programming language.
 
 A good object-oriented design involves an early focus on behaviors to realize the capabilities meeting the stated requirements and a late binding of implementation details to the requirements. This approach especially helps to decentralize control and distribute system behavior which can help manage the complexities of high-functionality large or distributed systems. Similarly, it can help to design and maintain explanation facilities for [cognitive models](https://en.wikipedia.org/wiki/Cognitive_model "Cognitive model"), [intelligent agents](https://en.wikipedia.org/wiki/Intelligent_agent "Intelligent agent"), and other [knowledge-based systems](https://en.wikipedia.org/wiki/Knowledge-based_systems).
+
+### Criticism (OOP)
+
+From the [OOP Wikipedia article](https://en.wikipedia.org/wiki/Object-oriented_programming#Criticism) and without any bias, I found the following interesting:
+
+This
+
+> For example, the [circle-ellipse problem](https://en.wikipedia.org/wiki/Circle-ellipse_problem "Circle-ellipse problem") is difficult to handle using OOP's concept of [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming) "Inheritance (object-oriented programming)").
+
+and
+
+> However, [Niklaus Wirth](https://en.wikipedia.org/wiki/Niklaus_Wirth "Niklaus Wirth") (who popularized the adage now known as [Wirth's law](https://en.wikipedia.org/wiki/Wirth%27s_law "Wirth's law"): "Software is getting slower more rapidly than hardware becomes faster") said of OOP in his paper, "Good Ideas through the Looking Glass", "This paradigm closely reflects the structure of systems 'in the real world', and it is therefore well suited to model complex systems with complex behaviours" (contrast [KISS principle](https://en.wikipedia.org/wiki/KISS_principle "KISS principle")).
+
+and 
+
+> [Steve Yegge](https://en.wikipedia.org/wiki/Steve_Yegge "Steve Yegge") and others noted that natural languages lack the OOP approach of strictly prioritizing _things_ (objects/nouns before _actions_ (methods/verbs). This problem may cause OOP to suffer more convoluted solutions than procedural programming.
